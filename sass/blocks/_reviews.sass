@@ -1,0 +1,97 @@
+.reviews
+  padding: 40px 0 60px 0
+  font-family: Mulish
+  max-height: 550px
+  overflow: auto
+  &__title
+    margin: 0
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 70px
+  &-slider
+    height: 100%
+    min-height: 280px
+    &__profile
+      margin-top: -45px
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      background-color: #fff
+      border-radius: 8px
+      max-width: 730px
+      margin: 45px auto 0
+      padding: 0 62px 30px
+      position: relative
+      &:after
+        content: ''
+        background-image: url(../img/quote-1.svg)
+        z-index: 10
+        background-repeat: no-repeat
+        width: 70px
+        height: 48px
+        position: absolute
+        top: 12px
+        left: 62px
+      &:before
+        content: ''
+        background-image: url(../img/quote-2.svg)
+        background-repeat: no-repeat
+        width: 70px
+        height: 48px
+        position: absolute
+        top: 118px
+        right: 62px
+    &__avatar
+      height: 90px
+      width: 90px
+      border-radius: 50%
+      margin-bottom: 8px
+      object-fit: cover
+    &__username
+      margin: 0
+      font-style: normal
+      font-weight: bold
+      font-size: 12px
+      line-height: 15px
+      color: $primary
+      margin-bottom: 9px
+    &__date
+      font-style: normal
+      font-weight: normal
+      font-size: 10px
+      line-height: 13px
+      color: #000
+    &__text
+      margin: 27px 0 0 3px
+      max-width: 537px
+      min-height: 114px
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 19px
+      text-align: justify
+      color: $textcolor
+    &__button
+      top: 27%
+      position: absolute
+      width: 30px
+      height: 30px
+      z-index: 99
+      cursor: pointer
+      background-repeat: no-repeat
+      background-position: center
+      background-color: transparent
+      &--next
+        right: 18px
+        background-image: url(../img/arr-next.svg)
+      &--prev
+        left: 18px
+        background-image: url(../img/arr-prev.svg)
