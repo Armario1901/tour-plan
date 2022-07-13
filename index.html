@@ -36,7 +36,7 @@
     <script src="https://api-maps.yandex.ru/2.1?apikey=e25df40e-3219-4f64-96f6-599af2e01e0c&lang=ru_RU"></script>
   </head>
   <body>
-    <header class="navbar navbar__mobile_fixed">
+    <header class="navbar ">
       <div class="container">
         <div class="navbar-top">
           <a href="#" class="logo">
@@ -311,12 +311,9 @@
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
         <form
-          action="send.php"
+          action="#"
           method="POST"
           class="subscribe form"
-          onsubmit="send(event, 'send.php')"
-          data-aos="fade-left"
-          data-aos-delay="250"
         >
           <input
             type="email"
@@ -671,15 +668,12 @@
           <!-- /.footer__contact -->
           <div
             class="footer__contact-form"
-            data-aos="fade-left"
-            data-aos-delay="200"
           >
             <h2 class="footer__title footer__title--mb3">Send us a message</h2>
             <form
-              action="send.php"
+              action="#"
               method="POST"
               class="footer__form form"
-              onsubmit="send(event, 'send.php')"
             >
               <div class="footer__input-wrapper">
                 <div class="footer__input-group">
@@ -737,10 +731,9 @@
         /></a>
         <h2 class="modal__title">Booking</h2>
         <form
-          action="send.php"
+          action="#"
           method="POST"
           class="modal__form form"
-          onsubmit="send(event, 'send.php')"
         >
           <input
             type="text"

@@ -1220,7 +1220,7 @@ template {
 .footer-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(min-content, 1fr)) [4];
+  -ms-grid-columns: (minmax(min-content, 1fr));
   grid-template-columns: repeat(4, minmax(-webkit-min-content, 1fr));
   grid-template-columns: repeat(4, minmax(min-content, 1fr));
   grid-gap: 20px;

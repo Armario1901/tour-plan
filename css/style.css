@@ -1039,15 +1039,6 @@ template {
   color: #fff;
   padding: 108px 0 46px;
 }
-.footer-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(-webkit-min-content, 1fr));
-  grid-template-columns: repeat(4, minmax(min-content, 1fr));
-  grid-gap: 20px;
-  grid-auto-rows: minmax(40px, -webkit-min-content);
-  grid-auto-rows: minmax(40px, min-content);
-  align-items: start;
-}
 .footer__title {
   text-transform: uppercase;
   font-style: normal;
@@ -1459,13 +1450,30 @@ template {
 @media (max-width: 768px) {
   .container, .newsletter-wrapper {
     max-width: 576px;
-    width: 92%;
+  }
+  .navbar-top {
+    position: fixed;
+    max-width: 576px;
+    width: 100%;
+    z-index: 99;
+  }
+  .navbar::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: 78px;
+    background-color: #ffffff;
+    z-index: 98;
   }
   .navbar__user--mobile-hidden, .navbar__search--mobile-hidden {
     display: none;
   }
   .navbar__user--mobile-visible, .navbar__search--mobile-visible {
     display: flex;
+    margin-right: 0;
   }
   .navbar__user--mobile-visible {
     flex-direction: column;
@@ -1488,12 +1496,12 @@ template {
     display: none;
   }
   .navbar-bottom__visible {
+    width: 100%;
     display: flex;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: fixed;
     top: 78px;
     padding-top: 30px;
+    z-index: 90;
   }
   .navbar-menu {
     display: flex;
@@ -1530,9 +1538,6 @@ template {
     margin: 10px 0 0 0;
     color: #fff;
   }
-  body {
-    padding-top: 78px;
-  }
   .menu-btn {
     width: 16px;
     height: 16px;
@@ -1546,6 +1551,9 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .breadcrumbs {
+    padding-top: 78px;
   }
   .hotel-wrapper {
     justify-content: space-between;
@@ -1636,7 +1644,7 @@ template {
   }
   .footer__input-wrapper {
     width: 100%;
-    max-width: 470px;
+    max-width: 540px;
   }
   .footer__input-group {
     width: 100%;
@@ -1656,14 +1664,13 @@ template {
 }
 @media (max-width: 576px) {
   .container {
-    min-width: 270px;
-    max-width: 530px;
+    width: 90%;
   }
   .logo, .logo__image {
     width: 99px;
   }
-  .navbar__mobile_fixed {
-    width: 100%;
+  .navbar-top {
+    width: 90%;
   }
   .hotel-slider {
     width: 100%;
@@ -1675,6 +1682,9 @@ template {
   }
   .subscribe {
     width: 100%;
+  }
+  .newsletter-wrapper {
+    width: 90%;
   }
   .newsletter-title {
     margin-bottom: 37px;
